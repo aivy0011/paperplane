@@ -1,0 +1,14 @@
+#A,#B,#C,#H,#K{
+	width: 80px;
+	font-size: 40pt;
+	text-align: center;
+}
+span {
+	font-size: 50pt;
+}
+h1 {
+	font-size: 50pt;
+}
+sup {
+	font-size: 30pt;
+}
