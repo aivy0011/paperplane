@@ -1,0 +1,27 @@
+@font-face {
+	font-family: Custom;
+	src: url(Custom_fonts/Coalition_v2..ttf);
+}
+.navbar-default .navbar-brand {
+	color: #c0392b;
+	font-weight: bold;
+}
+.navbar-default {
+  background-color: #ffffff;
+  border-color: #ffffff;
+  font-family:'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+h1 {
+  font-family:'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;	
+}
+body {
+	background-color: #ecf0f1;
+}
+#content .jumbotron {
+	background-color: #ffffff;
+	text-align: center;
+}
+#content .btn .btn-primary {
+	color: white
+	background-color: #c0392b;
+}
