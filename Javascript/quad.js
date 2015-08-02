@@ -7,7 +7,7 @@ function Quadratic() {
 	document.getElementById('B').innerHTML = "B=" + B;
 	var C = K - ((A * Math.pow(H,2)) + (B * H)) ;
 	document.getElementById('C').innerHTML = "C=" + C;
-	setTimeout(Quadratic, 7000);
+	setTimeout(Quadratic, 1000);
 	if (B > 0 && C > 0) {
 		document.getElementById('Quad').innerHTML = 'Y=' + A + "x<sup>2</sup>" + "+" + B + "x" + "+" + C;
 	} else if (B < 0 && C > 0) {
