@@ -8,13 +8,57 @@ function Quadratic() {
 	var C = K - ((A * Math.pow(H,2)) + (B * H)) ;
 	document.getElementById('C').innerHTML = "C=" + C;
 	setTimeout(Quadratic, 1000);
-	if (B > 0 && C > 0) {
-		document.getElementById('Quad').innerHTML = 'Y=' + A + "x<sup>2</sup>" + "+" + B + "x" + "+" + C;
-	} else if (B < 0 && C > 0) {
-		document.getElementById('Quad').innerHTML = 'Y=' + A + "x<sup>2</sup>" + "-" + Math.abs(B) + "x" + "+" + C;
-	} else if (B > 0 && C < 0) {
-		document.getElementById('Quad').innerHTML = 'Y=' + A + "x<sup>2</sup>" + "+" + B + "x" + "-" + Math.abs(C);
+	if(A == 1) {
+		if(B > 0) {
+			if(C > 0) {
+				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>+" + B + "x+" + C;
+			} else if(C == 0) {
+				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>+" + B + "x";
+			} else {
+				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>+" + B + "x-" + C;
+			}
+		} else if(B == 0) {
+			if(C > 0) {
+				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>+" + C;
+			} else if(C == 0){
+				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>";
+			} else {
+				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>-" + C;
+			}
+		} else {
+			if(C > 0) {
+				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>-" + Math.abs(B) + "x+" + C;
+			} else if(C == 0) {
+				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>-" + Math.abs(B) + "x";
+			} else {
+				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>-" + Math.abs(B) + "x-" + C;
+			}
+		}
 	} else {
-		document.getElementById('Quad').innerHTML = 'Y=' + A + "x<sup>2</sup>" + "-" + B + "x" + "-" + Math.abs(C);	
+		if(B > 0) {
+			if(C > 0) {
+				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>+" + B + "x+" + C;
+			} else if(C == 0) {
+				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>+" + B + "x";
+			} else {
+				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>+" + B + "x-" + C;
+			}
+		} else if(B == 0) {
+			if(C > 0) {
+				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>+" + C;
+			} else if(C == 0){
+				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>";
+			} else {
+				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>-" + C;
+			}
+		} else {
+			if(C > 0) {
+				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>-" + Math.abs(B) + "x+" + C;
+			} else if(C == 0) {
+				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>-" + Math.abs(B) + "x";
+			} else {
+				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>-" + Math.abs(B) + "x-" + C;
+			}
+		}
 	}
 }
