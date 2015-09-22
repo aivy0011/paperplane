@@ -1,25 +1,39 @@
-function contains(a, obj) {
-    var i = a.length;
-    while (i--) {
-       if (a[i] === obj) {
-           return true;
-       }
-    }
-    return false;
-}
-var vowels = ["a","A","e","E","i","I","o","O","u","U"]
-var result = ""
+
 function t() {
+	var result = [];
 	var string = document.getElementById('string').value;
 	var string = string.split(" ");
 	for(i = 0; i < string.length; i++) {
 		var word = string[i]
-		var fletter = word.substring(0);
-		if (contains(vowels, fletter)){
-			result = result + word + "way ";
-		} else {
-			result = result + word.substring(1, (word.length - 1)) + fletter + "ay ";
+		var fletter = word.substring(0,1);
+		var fletter = fletter.toLowerCase();
+		var lword = word.length;
+		switch(fletter){
+			case 'a':
+				word += "way";
+				result.push(word);
+				break;
+			case 'e':
+				word += "way";
+				result.push(word);
+				break;
+			case 'i':
+				word += "way";
+				result.push(word);
+				break;
+			case 'o':
+				word += "way";
+				result.push(word);
+				break;
+			case 'u':
+				word += "way";
+				result.push(word);
+				break;
+			default:
+				fletter = word.substring(0,1);
+				word = word.substring(1, lword) + fletter + "ay"
+				result.push(word);
 		}
 	}
-	document.getElementById("result").innerHTML = result;
+	document.getElementById("result").innerHTML = result.join(" ");
 }

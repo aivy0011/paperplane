@@ -1,0 +1,17 @@
+table {
+	font-size: 300%;
+    width: 90%;
+    border-collapse: collapse;
+}
+table, th, td {
+	border: solid black 1px;
+  text-align: center;
+}
+@media (max-width: @screen-xs) {
+      h1{font-size: 100%;}
+    }
+
+    @media (max-width: @screen-sm) {
+     h1{font-size: 70pt;}
+   }
+}

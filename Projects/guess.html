@@ -1,41 +1,37 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta name="author" content="Allen Ivy">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="author" content="Allen Ivy">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script src="../Javascript/jquery-2.1.1.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../bootstrap-3.2.0-dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="../bootstrap-3.2.0-dist/css/bootstrap-theme.css">
   <link rel="stylesheet" type="text/css" href="../CSS/sitemain.css">
+  <link rel="stylesheet" type="text/css" href="../CSS/guess.css">
   <script type="text/javascript" src="../bootstrap-3.2.0-dist/js/bootstrap.js"></script>
-  <script type="text/javascript" src="../Javascript/vertex.js"></script>
+  <script type="text/javascript" src="../Javascript/guess.js"></script>
   <script type="text/javascript" src="../Javascript/contact.js"></script>
-    <link rel="shortcut icon" href="../Images/logo_transperent.ico">
+  <link rel="shortcut icon" href="../Images/logo_transperent.ico">
   <title>Allen's Website</title>
   <style>
-    input {
-      width: 15%;
-      font-size: 400%;
-      text-align: center;
+    @media (max-width: @screen-xs) {
+      h1{font-size: 30pt;}
     }
-    span {
-      font-size: 400%;
-    }
-    h1 {
-      font-size: 400%;
-    }
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-      #content{
-        text-align: center;
-        }
-      h1 {
-        font-size: 280%;
-      }
-  }
-  </style>
 
+    @media (max-width: @screen-sm) {
+     h1{font-size: 70pt;}
+   }
+
+
+   h5 {
+     font-size: 1.4em;
+   }       
+   h1 {
+     text-align: center;
+   }
+</style>
 </head>
-<body onload="step_1()">
+<body>
   <div class="container-fullwidth">
 
 
@@ -62,28 +58,33 @@
               <ul class="dropdown-menu">
                 <li><a href="rcolor.html">Random Color Generator</a></li>
                 <li><a href="quad.html">Vertex to Quadratic</a></li>
-                <li class="active"><a href="#">Quadratic to Vertex</a></li>
+                <li><a href="vertex.html">Quadratic to Vertex</a></li>
                 <li><a href="password.html">Password Generator</a></li>
-                <li><a href="Pig_Latin.html">Pig Latin Translator</a></li>
               </ul>
             </li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-    <!-- End of the code -->
-    <!-- Content on the page -->
     <div id="content" class="container">
-      <form>
-      <input placeholder='A' id='A'><span>x<sup>2</sup>+</span><input placeholder="B" id="B"><span>x+</span><input placeholder="C" id="C">
-     </form>
-     <span id='H'></span><br>
-     <span id="K"></span><hr>
-     <h1 id='Vertex'></h1>
+      <table id="mytable">
+        <tr>
+          <th>Guess #</th>
+          <th>Guess</th>
+          <th>Response</th>
+        </tr>
+      </table>
     </div>
-
-
-
+    <div id="instruction" class="container">
+      <span>
+        <b>Step 1: </b>Come up with a random number between 0 - 100 <br>
+        <b>Step 2: </b>Click <button onclick="start()">Start</button> <br> 
+        <b>Step 3: </b>Wait for the computer to guess a number <br>
+        <b>Step 4a: </b>If the computer guesses a number bigger than your number enter '+' <br>
+        <b>Step 4b: </b>If the computer guesses a number smaller than your number enter '-' <br>
+        <b>Step 5: </b>If the computer guesses the correct number enter '='
+      </span>
+    </div>
   </div>
 </body>
 </html>

@@ -35,7 +35,7 @@
   </style>
 
 </head>
-<body onload="step_1()">
+<body onload="get_variables()">
   <div class="container-fullwidth">
 
 
@@ -64,7 +64,6 @@
                 <li><a href="quad.html">Vertex to Quadratic</a></li>
                 <li class="active"><a href="#">Quadratic to Vertex</a></li>
                 <li><a href="password.html">Password Generator</a></li>
-                <li><a href="Pig_Latin.html">Pig Latin Translator</a></li>
               </ul>
             </li>
           </ul>
@@ -77,9 +76,9 @@
       <form>
       <input placeholder='A' id='A'><span>x<sup>2</sup>+</span><input placeholder="B" id="B"><span>x+</span><input placeholder="C" id="C">
      </form>
-     <span id='H'></span><br>
-     <span id="K"></span><hr>
-     <h1 id='Vertex'></h1>
+     <span id='x_1'></span><br>
+     <span id="x_2"></span><hr>
+     <h1 id='Solution'></h1>
     </div>
 
 

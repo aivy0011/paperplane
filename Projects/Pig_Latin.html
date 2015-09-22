@@ -11,35 +11,12 @@
   <script type="text/javascript" src="../Javascript/Pig_latin.js"></script>
   <script type="text/javascript" src="../Javascript/contact.js"></script>
   <link rel="shortcut icon" href="../Images/logo_transperent.ico">
-  <title>Allen's Website</title>
+  <title>Pig Latin</title>
   <style>
-    @media (max-width: @screen-xs) {
-    h1{font-size: 30pt;}
-	}
-
-	@media (max-width: @screen-sm) {
-	    h1{font-size: 70pt;}
-	}
-
-
-	h5 {
-	    font-size: 1.4em;
-	}       
-	h1 {
-	      text-align: center;
+    #string {
+      width: 100%;
+      font-size: 300%;
     }
-	#length {
-		width: 100%;
-		font-size: 300%;
-		text-align: center;
-		color: #c0392b;
-	}
-	#submit {
-		width: 100%;
-		font-size: 300%;
-		background-color: #ffffff;
-		border-color: white;
-	}
   </style>
 </head>
 <body>
@@ -70,7 +47,8 @@
                 <li><a href="rcolor.html">Random Color Generator</a></li>
                 <li><a href="quad.html">Vertex to Quadratic</a></li>
                 <li><a href="vertex.html">Quadratic to Vertex</a></li>
-                <li class="active"><a href="password.html">Password Generator</a></li>
+                <li><a href="password.html">Password Generator</a></li>
+                <li class="active"><a href="#">Pig Latin Translator</a></li>
               </ul>
             </li>
           </ul>
@@ -79,7 +57,7 @@
     </nav>
 
 		<div id="content" class="container">
-		<input type="text" id="string"><button onclick="t()">Translate</button>
+		<input type="text" id="string"><button class="btn btn-primary btn-lg btn-block" onclick="t()">Translate</button>
 		<h1 id="result"></h1>
 		</div>
 		</div>
