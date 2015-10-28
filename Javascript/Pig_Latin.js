@@ -2,9 +2,10 @@
 function t() {
 	var result = [];
 	var string = document.getElementById('string').value;
+	
 	var string = string.split(" ");
 	for(i = 0; i < string.length; i++) {
-		var word = string[i]
+		var word = string[i];
 		var fletter = word.substring(0,1);
 		var fletter = fletter.toLowerCase();
 		var lword = word.length;

@@ -1,0 +1,13 @@
+doctype html
+html
+	head
+		include header.jade
+		script(src="../Javascript/longest.js")
+		link(rel="stylesheet" type="text/css" href="../CSS/longest.css")
+	body
+		.container-fullwidth
+			include nav.jade
+			#content.container
+				input#words
+				button(onclick="longest()") Get Words
+				h1#result

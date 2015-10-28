@@ -11,10 +11,10 @@
     <link rel="stylesheet" type="text/css" href="../bootstrap-3.2.0-dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../bootstrap-3.2.0-dist/css/bootstrap-theme.css">
     <link rel="stylesheet" type="text/css" href="../CSS/sitemain.css">
-    <script src="../Javascript/rcolor.js"></script>
-    <style>@media(max-width: @screen-xs){ h1{font-size: 30pt;}} @media(max-width: @screen-sm){ h1{font-size: 70pt;}} h5{font-size: 1.4em;} h1{text-align: center;}</style>
+    <script src="../Javascript/longest.js"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/longest.css">
   </head>
-  <body onload="randomcolor()">
+  <body>
     <div class="container-fullwidth">
       <div class="navbar navbar-default navbar-static-top">
         <div class="container">
@@ -26,12 +26,12 @@
               <li><a href="#">About Me</a></li>
               <li class="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle">Projects<span class="caret"> </span></a>
                 <ul class="dropdown-menu">
-                  <li class="active"><a href="#">Random Color Generator</a></li>
-                  <li><a href="quad.html">Vertex to Quadratic</a></li>
-                  <li><a href="vertex.html">Quadratic to Vertex</a></li>
-                  <li><a href="password.html">Password Generator</a></li>
-                  <li><a href="Pig_Latin.html">Pig Latin Translator</a></li>
-                  <li><a href="longest.html">Longest Word</a></li>
+                  <li><a href="../Projects/rcolor.html">Random Color Generator</a></li>
+                  <li><a href="../Projects/quad.html">Vertex to Quadratic</a></li>
+                  <li><a href="../Projects/vertex.html">Quadratic to Vertex</a></li>
+                  <li><a href="../Projects/password.html">Password Generator</a></li>
+                  <li><a href="../Projects/Pig_Latin.html">Pig Latin Translator</a></li>
+                  <li class="active"><a href="#">Longest Word</a></li>
                 </ul>
               </li>
             </ul>
@@ -39,8 +39,9 @@
         </div>
       </div>
       <div id="content" class="container">
-        <h1 id="Heading" onclick="start()">Random Color</h1>
-        <h1 id="Hexcode" onclick="stop()"></h1>
+        <input id="words">
+        <button onclick="longest()">Get Words</button>
+        <h1 id="result"></h1>
       </div>
     </div>
   </body>

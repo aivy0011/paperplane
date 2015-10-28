@@ -7,39 +7,24 @@
   <link rel="stylesheet" type="text/css" href="../bootstrap-3.2.0-dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="../bootstrap-3.2.0-dist/css/bootstrap-theme.css">
   <link rel="stylesheet" type="text/css" href="../CSS/sitemain.css">
+  <link rel="stylesheet" type="text/css" href="../CSS/calculator.css">
   <script type="text/javascript" src="../bootstrap-3.2.0-dist/js/bootstrap.js"></script>
-  <script type="text/javascript" src="../Javascript/vertex.js"></script>
+  <script type="text/javascript" src="../Javascript/calculator.js"></script>
   <script type="text/javascript" src="../Javascript/contact.js"></script>
-    <link rel="shortcut icon" href="../Images/logo_transperent.ico">
-  <title>Allen's Website</title>
+  <link rel="shortcut icon" href="../Images/logo_transperent.ico">
+  <title>Calculator</title>
   <style>
-    input {
-      width: 15%;
-      font-size: 400%;
-      text-align: center;
+    #string {
+      width: 100%;
+      font-size: 300%;
     }
-    span {
-      font-size: 400%;
-    }
-    h1 {
-      font-size: 400%;
-    }
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-      #content{
-        text-align: center;
-        }
-      h1 {
-        font-size: 280%;
-      }
-  }
   </style>
-
 </head>
-<body onload="step_1()">
+<body>
   <div class="container-fullwidth">
 
 
-    <!-- Code for the navigation menu at thw top of the page -->
+  <!-- Code for the navigation menu at thw top of the page -->
     <nav class="navbar navbar-default navbar-static-top">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -62,29 +47,49 @@
               <ul class="dropdown-menu">
                 <li><a href="rcolor.html">Random Color Generator</a></li>
                 <li><a href="quad.html">Vertex to Quadratic</a></li>
-                <li class="active"><a href="#">Quadratic to Vertex</a></li>
+                <li><a href="vertex.html">Quadratic to Vertex</a></li>
                 <li><a href="password.html">Password Generator</a></li>
-                <li><a href="Pig_Latin.html">Pig Latin Translator</a></li>
-                <li><a href="longest.html">Longest Word</a></li>
+                <li class="active"><a href="#">Pig Latin Translator</a></li>
               </ul>
             </li>
           </ul>
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-    <!-- End of the code -->
-    <!-- Content on the page -->
-    <div id="content" class="container">
-      <form>
-      <input placeholder='A' id='A'><span>x<sup>2</sup>+</span><input placeholder="B" id="B"><span>x+</span><input placeholder="C" id="C">
-     </form>
-     <span id='H'></span><br>
-     <span id="K"></span><hr>
-     <h1 id='Vertex'></h1>
-    </div>
 
+		<div id="content" class="container">
+		<table>
+			<tr>
+				<th colspan="3"><input id="line" type="input"></th>
+				<th><button class="numbers" value="AC">AC</button></th>
+			</tr>
+			<tr>
+				<td><button class="numbers" value="7" onclick="add()">7</button></td>
+				<td><button class="numbers" value="8">8</button></td>
+				<td><button class="numbers" value="9">9</button></td>
+				<td><button class="numbers" value="/">/</button></td>
+			</tr>
+			<tr>
+				<td><button class="numbers" value="4">4</button></td>
+				<td><button class="numbers" value="5">5</button></td>
+				<td><button class="numbers" value="6">6</button></td>
+				<td><button class="numbers" value="*">*</button></td>
+			</tr>
+			<tr>
+				<td><button class="numbers" value="1">1</button></td>
+				<td><button class="numbers" value="2">2</button></td>
+				<td><button class="numbers" value="3">3</button></td>
+				<td><button class="numbers" value="-">-</button></td>
+			</tr>
+			<tr>
+				<td><button class="numbers" value="0">0</button></td>
+				<td><button class="numbers" value=".">.</button></td>
+				<td><button class="numbers" value="=">=</button></td>
+				<td><button class="numbers" value="+">+</button></td>
+			</tr>
+		</table>
+		</div>
+		</div>
 
-
-  </div>
-</body>
+	</body>
 </html>
