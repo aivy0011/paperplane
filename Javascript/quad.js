@@ -11,53 +11,53 @@ function Quadratic() {
 	if(A == 1) {
 		if(B > 0) {
 			if(C > 0) {
-				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>+" + B + "x+" + C;
+				document.getElementById('Quad').innerHTML = "y=x<sup>2</sup>+" + B + "x+" + C;
 			} else if(C == 0) {
-				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>+" + B + "x";
+				document.getElementById('Quad').innerHTML = "y=x<sup>2</sup>+" + B + "x";
 			} else {
-				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>+" + B + "x-" + C;
+				document.getElementById('Quad').innerHTML = "y=x<sup>2</sup>+" + B + "x-" + C;
 			}
 		} else if(B == 0) {
 			if(C > 0) {
-				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>+" + C;
+				document.getElementById('Quad').innerHTML = "y=x<sup>2</sup>+" + C;
 			} else if(C == 0){
-				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>";
+				document.getElementById('Quad').innerHTML = "y=x<sup>2</sup>";
 			} else {
-				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>-" + C;
+				document.getElementById('Quad').innerHTML = "y=x<sup>2</sup>-" + C;
 			}
 		} else {
 			if(C > 0) {
-				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>-" + Math.abs(B) + "x+" + C;
+				document.getElementById('Quad').innerHTML = "y=x<sup>2</sup>-" + Math.abs(B) + "x+" + C;
 			} else if(C == 0) {
-				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>-" + Math.abs(B) + "x";
+				document.getElementById('Quad').innerHTML = "y=x<sup>2</sup>-" + Math.abs(B) + "x";
 			} else {
-				document.getElementById('Quad').innerHTML = "Y=x<sup>2</sup>-" + Math.abs(B) + "x-" + C;
+				document.getElementById('Quad').innerHTML = "y=x<sup>2</sup>-" + Math.abs(B) + "x-" + C;
 			}
 		}
 	} else {
 		if(B > 0) {
 			if(C > 0) {
-				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>+" + B + "x+" + C;
+				document.getElementById('Quad').innerHTML = "y=" + A + "x<sup>2</sup>+" + B + "x+" + C;
 			} else if(C == 0) {
-				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>+" + B + "x";
+				document.getElementById('Quad').innerHTML = "y=" + A + "x<sup>2</sup>+" + B + "x";
 			} else {
-				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>+" + B + "x-" + C;
+				document.getElementById('Quad').innerHTML = "y=" + A + "x<sup>2</sup>+" + B + "x-" + C;
 			}
 		} else if(B == 0) {
 			if(C > 0) {
-				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>+" + C;
+				document.getElementById('Quad').innerHTML = "y=" + A + "x<sup>2</sup>+" + C;
 			} else if(C == 0){
-				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>";
+				document.getElementById('Quad').innerHTML = "y=" + A + "x<sup>2</sup>";
 			} else {
-				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>-" + C;
+				document.getElementById('Quad').innerHTML = "y=" + A + "x<sup>2</sup>-" + C;
 			}
 		} else {
 			if(C > 0) {
-				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>-" + Math.abs(B) + "x+" + C;
+				document.getElementById('Quad').innerHTML = "y=" + A + "x<sup>2</sup>-" + Math.abs(B) + "x+" + C;
 			} else if(C == 0) {
-				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>-" + Math.abs(B) + "x";
+				document.getElementById('Quad').innerHTML = "y=" + A + "x<sup>2</sup>-" + Math.abs(B) + "x";
 			} else {
-				document.getElementById('Quad').innerHTML = "Y=" + A + "x<sup>2</sup>-" + Math.abs(B) + "x-" + C;
+				document.getElementById('Quad').innerHTML = "y=" + A + "x<sup>2</sup>-" + Math.abs(B) + "x-" + C;
 			}
 		}
 	}

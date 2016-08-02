@@ -1,10 +1,10 @@
 
-function t() {
+function change() {
 	var result = [];
 	var string = document.getElementById('string').value;
-	
+	setTimeout(change,500)
 	var string = string.split(" ");
-	for(i = 0; i < string.length; i++) {
+	for(var i = 0; i < string.length; i++) {
 		var word = string[i];
 		var fletter = word.substring(0,1);
 		var fletter = fletter.toLowerCase();
