@@ -1,3 +1,5 @@
+var all_colors = [];
+
 function getContrastYIQ(hexcolor){
 	var r = parseInt(hexcolor.substr(0,2),16);
 	var g = parseInt(hexcolor.substr(2,2),16);
@@ -14,15 +16,29 @@ function randomcolor() {
 		var Hexcode = Hexcode + rString[randomn];
 		document.body.style.background = Hexcode;
 		document.getElementById('Hexcode').innerHTML = Hexcode;
-		console.log(Hexcode);
 	}
-	document.getElementById('Hexcode').style.color = getContrastYIQ(Hexcode);
-document.getElementById('Heading').style.color = getContrastYIQ(Hexcode);
-	start();
+	all_colors.push("<tr><td>"+Hexcode+"</td><td style='background-color:"+Hexcode+";width:50%'></td></tr>");
+	$('body').css("background-color", Hexcode);
+	$('#Hexcode').css("color", getContrastYIQ(Hexcode));
+	$('#Heading').css("color", getContrastYIQ(Hexcode));
+	console.log(all_colors);
+}
+function table(){
+	$('#colors').html("<table class='table-bordered' style='margin: 0 auto; background-color:white;'><tr><th>Hexcode</th><th>Colors</th></tr>"+all_colors.join('')+"</table>")
+	setTimeout(table, 1000);
 }
 function start() {
-	a = setTimeout(randomcolor, 5000);
+	setTimeout(randomcolor, 5000);
+	var a = setTimeout(start, 5000);
 }
 function stop() {
    clearTimeout(a);
-  }
+  } 
+function display(){
+	$('#colors').toggle();
+	table();
+}
+$(document).ready(function(){
+	randomcolor();
+	start();
+})
