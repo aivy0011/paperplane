@@ -2,6 +2,9 @@ $(document).ready(function () {
     $(".numbers").click(function () {
         $("#line").val($("#line").val() + this.value);
     });
+    $(".clear").click(function(){
+    	remove();
+    })
 });
 function isset(a) {
 	if(a != null){
@@ -13,18 +16,18 @@ function isset(a) {
 	}
 }
 function add() {
-	if(isset(first)){
+	if(isset(first) == false){
 		var first = $("#line").val();
 		console.log(first);
+		$('#line').val('');
 	} else {
 		var second= $("#line").val();
 		alert(second);
+		
 	}
-	$("#line").val("")
+	$("#line").val(first + second);
 }
 
 function remove() {
-	var line = $("#line").val()
-	var length = line.length - 1;
-	$("#line").val(line.substring(0, length));
+	$('#line').val('');
 }

@@ -3,7 +3,7 @@ function step_1() {
 	var A = document.getElementById('A').value - 0;
 	var B = document.getElementById('B').value - 0;
 	var C = document.getElementById('C').value - 0;
-		if (A == NaN) {
+		if (isNaN(A)) {
 			A = 0;
 			B = 0;
 			C = 0;

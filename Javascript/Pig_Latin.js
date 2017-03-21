@@ -2,7 +2,6 @@ function change() {
 	if($('#string').val() != ''){
 		var result = [];
 		var string = document.getElementById('string').value;
-		setTimeout(change,500)
 		var string = string.split(" ");
 		for(var i = 0; i < string.length; i++) {
 			var word = string[i];
@@ -39,10 +38,11 @@ function change() {
 		document.getElementById("result").innerHTML = result.join(" ");
 	} else {
 		$('#result').text('You did not enter anything');
-		setTimeout(change,500);
 	}
 }
 $(document).ready(function(){
-	change()
+	$('#string').on('input', function(){
+		change();
+	});
 })
 

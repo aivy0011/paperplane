@@ -23,21 +23,31 @@ function randomcolor() {
 	$('#Heading').css("color", getContrastYIQ(Hexcode));
 	console.log(all_colors);
 }
+
+
 function table(){
-	$('#colors').html("<table class='table-bordered' style='margin: 0 auto; background-color:white;'><tr><th>Hexcode</th><th>Colors</th></tr>"+all_colors.join('')+"</table>")
+	$('#colors').html("<table class='table-bordered' style='margin: 0 auto; background-color:white; border-width: thick;'><tr><th>Hexcode</th><th>Colors</th></tr>"+all_colors.join('')+"</table>")
 	setTimeout(table, 1000);
 }
+
+
 function start() {
 	setTimeout(randomcolor, 5000);
 	var a = setTimeout(start, 5000);
 }
+
+
 function stop() {
    clearTimeout(a);
-  } 
+}
+
+
 function display(){
 	$('#colors').toggle();
 	table();
 }
+
+
 $(document).ready(function(){
 	randomcolor();
 	start();
