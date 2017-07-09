@@ -10,5 +10,4 @@ function blank_spaces() {
 		spaces = spaces + "_";
 	}
 	document.getElementById('answer').innerHTML = spaces;
- nmnm
 }
