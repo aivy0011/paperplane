@@ -15,7 +15,7 @@ h1 {
   font-family:'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;	
 }
 body {
-	background-color: #ecf0f1;
+	background-color:#ecf0f1;
 }
 #content .jumbotron {
 	background-color: #ffffff;
@@ -24,4 +24,47 @@ body {
 #content .btn .btn-primary {
 	color: white;
 	background-color: #c0392b;
+}
+.navbar-custom {
+    background-color:#3498db;
+    color:#ffffff;
+    border-radius:0;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
+
+.navbar-custom .navbar-nav > .active > a {
+    color: #ffffff;
+    background-color:transparent;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus,
+.navbar-custom .navbar-nav > .open >a {
+    text-decoration: none;
+    background-color: #2980b9;
+}
+
+.navbar-custom .navbar-brand {
+    color:#eeeeee;
+}
+.navbar-custom .navbar-toggle {
+    background-color:#eeeeee;
+}
+.navbar-custom .icon-bar {
+    background-color:#3498db;
+}
+/* for dropdowns only */
+.navbar-custom .navbar-nav .dropdown-menu  { 
+  background-color: #fff;
+}
+.navbar-custom .navbar-nav .dropdown-menu>li>a  { 
+  color: #000;
+}
+.navbar-custom .navbar-nav .dropdown-menu>li>a:hover,.navbar-custom .navbar-nav .dropdown-menu>li>a:focus  { 
+  color: #3498db;
 }
