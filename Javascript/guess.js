@@ -33,9 +33,16 @@ function Guess(value) {
 		}
 	} else {
 		$('#guess').hide();
-		$('#Number').html('The Computer was able to guess your number')
+		$('#redo').show();
 	}
 }
 function randomNumber(min, max){
 	return Math.floor(Math.random() * (max-min+1) + min);
+}
+function startover(){
+		$('#redo').hide();
+ 		lo = 1;
+		hi = 100;
+		guess = randomNumber(lo, hi);
+		Start();
 }
