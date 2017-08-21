@@ -29,6 +29,8 @@ function change() {
 					word += "way";
 					result.push(word);
 					break;
+				case '':
+					break;
 				default:
 					fletter = word.substring(0,1);
 					word = word.substring(1, lword) + fletter + "ay"
