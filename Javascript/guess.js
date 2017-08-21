@@ -1,22 +1,41 @@
-var table = document.getElementById("mytable");
-var lvalue = 0
-var uvalue = 100
-var i = 1
-var response
-function randomint(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+var lo = 1;
+var hi = 100;
+var guess = randomNumber(lo, hi);
+
+$(document).ready(function(){	
+	$('#btn').click(function(){
+		$('#btn').hide();
+		Start();
+		$(document).on('click','.response',function(){
+		  var id = $(this).attr('id');
+		  Guess(id);	 
+		});
+	})
+})
+
+
+function Start() {
+	$('#btn').after("<div id='guess'><h1 id='Number'>"+guess+"</h1><button class='btn response' id='<' style='background-color:#2ecc71 ; color: white;'>Less than</button>&nbsp<button class='btn response' id='=' style='background-color:#2c3e50; color: white;'>That's the Number</button>&nbsp<button class='btn response' id='>' style='background-color:#e74c3c; color: white;'>Greater than</button></div>");
 }
-var guess = randomint(lvalue, uvalue);
-function insert_row() {
-	var guess = randomint(lvalue, uvalue);
-	var row = table.insertRow(-1);
-	var cell1 = row.insertCell(0);
-	var cell2 = row.insertCell(1);
-	var cell3 = row.insertCell(2);
-	cell1.innerHTML = i;
-	cell2.innerHTML = guess;
-	cell3.innerHTML = "<button value='+'>+</button><button value='='>=</button><button value='-'>-</button>"
+function Guess(value) {
+	var check = value;
+	if(check != '='){
+		if(check == '<'){
+			hi = guess;
+			guess = randomNumber(lo, hi);
+			$('#Number').html(guess);
+		}
+
+		else if(check == '>'){
+			lo = guess;
+			guess = randomNumber(lo, hi);
+			$('#Number').html(guess);
+		}
+	} else {
+		$('#guess').hide();
+		$('#Number').html('The Computer was able to guess your number')
+	}
 }
-function start() {
-	insert_row();
-} 
+function randomNumber(min, max){
+	return Math.floor(Math.random() * (max-min+1) + min);
+}
