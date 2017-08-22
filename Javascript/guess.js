@@ -33,6 +33,7 @@ function Guess(value) {
 		}
 	} else {
 		$('#guess').hide();
+		$('#answer').html("Your number was " + guess);
 		$('#redo').show();
 	}
 }
