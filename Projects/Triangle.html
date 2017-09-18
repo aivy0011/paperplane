@@ -8,38 +8,23 @@
   <link rel="stylesheet" type="text/css" href="../bootstrap-3.2.0-dist/css/bootstrap-theme.css">
   <link rel="stylesheet" type="text/css" href="../CSS/sitemain.css">
   <script type="text/javascript" src="../bootstrap-3.2.0-dist/js/bootstrap.js"></script>
-  <script type="text/javascript" src="../Javascript/vertex.js"></script>
+  <script src="../Javascript/jCanvas.min.js"></script>
+  <script type="text/javascript" src="../Javascript/Triangle.js"></script>
   <script type="text/javascript" src="../Javascript/contact.js"></script>
-    <link rel="shortcut icon" href="../Images/logo_transperent.ico">
-  <title>Allen's Website</title>
+  <link rel="shortcut icon" href="../Images/logo_transperent.ico">
+  <title>Triangle</title>
   <style>
-    input {
-      width: 15%;
-      font-size: 400%;
-      text-align: center;
+    #string {
+      width: 100%;
+      font-size: 300%;
     }
-    span {
-      font-size: 400%;
-    }
-    h1 {
-      font-size: 400%;
-    }
-    @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-      #content{
-        text-align: center;
-        }
-      h1 {
-        font-size: 280%;
-      }
-  }
   </style>
-
 </head>
-<body onload="step_1()">
+<body>
   <div class="container-fullwidth">
 
 
-    <!-- Code for the navigation menu at thw top of the page -->
+  <!-- Code for the navigation menu at thw top of the page -->
     <nav class="navbar navbar-custom navbar-static-top">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -62,11 +47,11 @@
               <ul class="dropdown-menu">
                 <li><a href="rcolor.html">Random Color Generator</a></li>
                 <li><a href="quad.html">Vertex to Quadratic</a></li>
-                <li class="active"><a href="#">Quadratic to Vertex</a></li>
+                <li><a href="vertex.html">Quadratic to Vertex</a></li>
                 <li><a href="password.html">Password Generator</a></li>
                 <li><a href="Pig_Latin.html">Pig Latin Translator</a></li>
                 <li><a href="../momentum.html">Momentum</a></li>
-                <li><a href="guess.html">Guess my Number</a></li>
+                <li><a href="guess.html">Guess My Number</a></li>
                 <li><a href="projects.html">Projects from CSC116</a></li>
               </ul>
             </li>
@@ -74,19 +59,18 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-    <!-- End of the code -->
-    <!-- Content on the page -->
-    <div id="content" class="container">
-      <form>
-      <input placeholder='A' id='A'><span>x<sup>2</sup>+</span><input placeholder="B" id="B"><span>x+</span><input placeholder="C" id="C">
-     </form>
-     <span id='H'></span><br>
-     <span id="K"></span><hr>
-     <h1 id='Vertex'></h1>
-    </div>
 
+        <div id="content" class="container" style="text-align: center">
+          <label>Number of Rows:</label><input type="number" class="form-inline" id='numRows' value="3" min="0" max="6" required>
+          <label>Color of Outline:</label><input type="color" id="colorOfLine">
+          <canvas id="myCanvas" width="700" height="700" style="border:1px solid #000000; display: block; margin-right: auto; margin-left: auto; resize: both;">
+  <p>This is fallback content 
+  for users of assistive technologies 
+  or of browsers that don't have 
+  full support for the Canvas API.</p>
+</canvas>
+        </div>
+      </div>
 
-
-  </div>
-</body>
+    </body>
 </html>
