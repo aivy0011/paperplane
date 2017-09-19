@@ -14,14 +14,15 @@
   <link rel="shortcut icon" href="../Images/logo_transperent.ico">
   <title>Triangle</title>
   <style>
-    #string {
-      width: 100%;
-      font-size: 300%;
-    }
+    html, body, #content {
+  max-width:  100%;
+  max-height: 100%;
+  margin: 0px;
+  }
   </style>
 </head>
 <body>
-  <div class="container-fullwidth">
+  <div class="container-fullwidth" style="text-align: center;">
 
 
   <!-- Code for the navigation menu at thw top of the page -->
@@ -59,17 +60,14 @@
         </div><!-- /.navbar-collapse -->
       </div><!-- /.container-fluid -->
     </nav>
-
-        <div id="content" class="container" style="text-align: center">
           <label>Number of Rows:</label><input type="number" class="form-inline" id='numRows' value="3" min="0" max="6" required>
           <label>Color of Outline:</label><input type="color" id="colorOfLine">
-          <canvas id="myCanvas" width="700" height="700" style="border:1px solid #000000; display: block; margin-right: auto; margin-left: auto; resize: both;">
+          <canvas id="myCanvas" style="border:1px solid #000000; display: block; margin-right: auto; margin-left: auto; ">
   <p>This is fallback content 
   for users of assistive technologies 
   or of browsers that don't have 
   full support for the Canvas API.</p>
 </canvas>
-        </div>
       </div>
 
     </body>

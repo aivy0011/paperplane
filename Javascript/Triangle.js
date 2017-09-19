@@ -28,10 +28,15 @@ function drawTriangle($canvas, x, y, sideLength, color){
     });
 }
 function userTriangle(){
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+     ctx.canvas.width  = window.innerWidth - 50;
+    ctx.canvas.height = window.innerHeight - 110;
     var $canvas = $('#myCanvas');
+
     $canvas.clearCanvas()
     var Length = 100;
-    var initialX = 350;
+    var initialX = (window.innerWidth - 50)/2
     var initialY = 50;
     var numRows = $('#numRows').val();
     var color = $('#colorOfLine').val();
