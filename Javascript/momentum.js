@@ -32,7 +32,7 @@ function get_time(){
 
 function background_image(){
     var images = ["url('Images/1.jpg') no-repeat center center fixed","url('Images/2.jpg') no-repeat center center fixed" ,"url('Images/3.jpg') no-repeat center center fixed",]
-    var rnumber = Math.floor(Math.random() * (2/*max*/ - 0 /*min*/ + 1)) + 0 /*min*/
+    var rnumber = Math.floor(Math.random() * (2 + 1))
     
     $('body').css({'background': images[rnumber],
     '-webkit-background-size': 'cover',
