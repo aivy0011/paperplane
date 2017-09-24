@@ -15,7 +15,13 @@ $(document).ready(function(){
 
 
 function Start() {
-	$('#btn').after("<div id='guess'><h1 id='Number'>"+guess+"</h1><button class='btn response' id='<' style='background-color:#2ecc71 ; color: white;'>Less than</button>&nbsp<button class='btn response' id='=' style='background-color:#2c3e50; color: white;'>That's the Number</button>&nbsp<button class='btn response' id='>' style='background-color:#e74c3c; color: white;'>Greater than</button></div>");
+	var display = "<div id='guess'>";
+	display += "<h1 id='Number'>"+guess+"</h1><div class='row'>";
+	display += "<div class='col-md-4'><button class='btn response'  id='<' style='background-color:#2ecc71 ; color: white;'>Less than</button></div>";
+	display += "<div class='col-md-4'><button class='btn response'  id='=' style='background-color:#2c3e50; color: white;'>That's the Number</button></div>";
+	display += "<div class='col-md-4'><button class='btn response'  id='>' style='background-color:#e74c3c; color: white;'>Greater than</button></div>";
+	display += "</div></div>";
+	$('#btn').after(display);
 }
 function Guess(value) {
 	var check = value;

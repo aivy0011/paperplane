@@ -1,13 +1,7 @@
-@media(max-width: screen-xs){
-				h1{font-size: 30pt;}
-				#guess{width: 50%; margin-right: auto; margin-left: auto;}
-			}
-			@media(max-width: screen-sm){
-				h1{font-size: 70pt;}
-				#guess{width: 50%; margin-right: auto; margin-left: auto;}
-			}
 h5{font-size: 1.4em;}
 h1{text-align:center;}
-#length{width: 100%; font-size: 300%; text-align: center; color:#3498db;}
-#submit{width: 100%; font-size: 300%; background-color: #ffffff; border-color:white;}
-#guess{width: 30%; margin-right: auto; margin-left: auto;}
+#guess{width: 50%; margin-right: auto; margin-left: auto;}
+.btn {
+    width: 100%;
+    margin-bottom: 3%;
+}
