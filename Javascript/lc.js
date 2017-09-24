@@ -16,10 +16,11 @@ function display(){
     var High_Loan_Amount = parseInt($("#HL").val());
     var Loan_Increment = parseInt($("#LI").val());
 
-    var table = "<h1>Loan Table</h1><table><th></th>";
+    var table = "<tr><th></th>";
     for(var loan = Low_Loan_Amount; loan <= High_Loan_Amount; loan += Loan_Increment){
         table += "<th class='loan'>$"+loan+"</th>";
     }
+    table += "</tr>";
     for(var interest = 1; interest <= Maximum_Interest_Rate; interest++){
         table += "<tr><th class='interest'>"+interest+"%</th>";
         for(var loan = Low_Loan_Amount; loan <= High_Loan_Amount; loan += Loan_Increment){
@@ -28,8 +29,7 @@ function display(){
         }
         table += "</tr>";
     }
-    table += "</table><br><button class='btn btn' style='background-color: #2ecc71; color: white' data-toggle='modal' data-target='#myModal'>Change numbers</button>"
-    $("#content").html(table);
+    $("#table").html(table);
 }
 
 $(document).ready(function(){

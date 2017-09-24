@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<meta name="author" content="Allen Ivy">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="author" content="Allen Ivy">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <script src="../Javascript/jquery-2.1.1.min.js"></script>
   <link rel="stylesheet" type="text/css" href="../bootstrap-3.2.0-dist/css/bootstrap.css">
   <link rel="stylesheet" type="text/css" href="../bootstrap-3.2.0-dist/css/bootstrap-theme.css">
@@ -12,13 +12,12 @@
   <script type="text/javascript" src="../Javascript/lc.js"></script>
   <script type="text/javascript" src="../Javascript/contact.js"></script>
   <link rel="shortcut icon" href="../Images/logo_transperent.ico">
-  <title>Triangle</title>
+  <title>Loan Calculator</title>
   <style>
     th {
       width: 9%;
       text-align: center;
-      border: solid #ecf0f1;
-  }
+    }
     table {
       margin-left: auto;
       margin-right: auto;
@@ -26,10 +25,6 @@
 
     .interest {
       text-align: right;
-      border-right-color: #2c3e50;
-    }
-    .loan {
-      border-bottom-color: #2c3e50;
     }
   </style>
 </head>
@@ -37,7 +32,7 @@
   <div class="container-fullwidth">
 
 
-  <!-- Code for the navigation menu at thw top of the page -->
+    <!-- Code for the navigation menu at thw top of the page -->
     <nav class="navbar navbar-custom navbar-static-top">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -73,34 +68,44 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-        <div id="content" class="container" style="text-align: center">
-          
+    <div id="content" class="container" style="text-align: center">
+      <div class="panel panel-default">
+        <div class="panel-heading">Loan Calculator</div>
+        <div class="panel-body">
+          <p>This is based on the loan calculator assignment that was given to us in CSC116. Write a program named LoanCalculator that calculates and outputs the monthly payment amounts for 5-year loans of $5000, $10000, $15000, $20000, $25000, and $30000 for annual interest rates ranging from 1% - 20%.</p>
         </div>
-        <div id="myModal" class="modal fade" role="dialog">
-          <div class="modal-dialog">
+        </div>
+        <!-- Table -->
+        <table id='table' class="table">
+        </table>
+        <br><button class='btn btn' style='background-color: #2ecc71; color: white' data-toggle='modal' data-target='#myModal'>Change numbers</button>
+      
+    </div>
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
 
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h1 class="modal-title">Values</h1>
-              </div>
-              <div class="modal-body">
-                
-                <label>Max Interest Rate</label><input type="number" id='MIR' value="20"><br>
-                <label>Length of Loan</label><input type="number" id='LOL' value="60"><br>
-                <label>Lowest Loan</label><input type="number" id="LL" value="5000"><br>
-                <label>Highest Loan</label><input type="number" id= 'HL' value="30000"><br>
-                <label>Loan Increment</label><input type="number" id='LI' value="5000">
-              </div>
-              <div class="modal-footer">
-                <button type="button" id='btn' onclick="display()" class="btn form-control" data-dismiss="modal" style="background-color: #34495e; color: white">Update</button>
-              </div>
-            </div>
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h1 class="modal-title">Values</h1>
+          </div>
+          <div class="modal-body">
 
+            <label>Max Interest Rate</label><input type="number" id='MIR' value="20"><br>
+            <label>Length of Loan</label><input type="number" id='LOL' value="60"><br>
+            <label>Lowest Loan</label><input type="number" id="LL" value="5000"><br>
+            <label>Highest Loan</label><input type="number" id= 'HL' value="30000"><br>
+            <label>Loan Increment</label><input type="number" id='LI' value="5000">
+          </div>
+          <div class="modal-footer">
+            <button type="button" id='btn' onclick="display()" class="btn form-control" data-dismiss="modal" style="background-color: #34495e; color: white">Update</button>
           </div>
         </div>
-      </div>
 
-    </body>
+      </div>
+    </div>
+  </div>
+
+</body>
 </html>
