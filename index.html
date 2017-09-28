@@ -9,11 +9,7 @@
   <link rel="stylesheet" type="text/css" href="CSS/sitemain.css">
   <script type="text/javascript" src="bootstrap-3.2.0-dist/js/bootstrap.js"></script>
   <script type="text/javascript" src="Javascript/contact.js"></script>
-  <script type="text/javascript">
-    function resizeIframe(obj) {
-    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-  }
-  </script>
+  <script type="text/javascript" src="Javascript/typewriter.js"></script>
   <link rel="shortcut icon" href="Images/logo_transperent.ico">
   <title>IvyBros</title>
 </head>
@@ -41,7 +37,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="Projects/projectsCSC116.html">Projects from CSC116</a></li>
-                  <li><a href="Projects/projects.html">Other Projects</a></li>
+                <li><a href="Projects/projects.html">Other Projects</a></li>
               </ul>
             </li>
           </ul>
@@ -52,7 +48,12 @@
     
     <div id="content" class="container">
       <div class="jumbotron center">
-        <h1>Projects I have worked on</h1>
+        <h1>
+        <a href="" class="typewrite" data-period="2000" data-type='[ "Welcome to my website", "My name is Allen Ivy","I am a Student at NC State", "Below are the projects I worked on so far", "I Love Building Websites for fun." ]'>
+            <span class="wrap"></span>
+          </a>
+        </h1>
+
       </div>
       <div class="row">
         <div class='col-md-6'>
@@ -63,7 +64,7 @@
         </div>
         <div class='col-md-6'>
           <div class='thumbnail'>
-          <a href='Projects/rcolor.html'><iframe style='min-height: 300px; overflow: hidden;' scrolling="no" src="Projects/rcolor.html" frameborder="0" width="100%" height=""></iframe></a>
+            <a href='Projects/rcolor.html'><iframe style='min-height: 300px; overflow: hidden;' scrolling="no" src="Projects/rcolor.html" frameborder="0" width="100%" height=""></iframe></a>
             <div class='caption'>A random color generator made using javascript and jQuery</div>
           </div>
         </div>
