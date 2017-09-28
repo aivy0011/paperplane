@@ -9,6 +9,11 @@
   <link rel="stylesheet" type="text/css" href="CSS/sitemain.css">
   <script type="text/javascript" src="bootstrap-3.2.0-dist/js/bootstrap.js"></script>
   <script type="text/javascript" src="Javascript/contact.js"></script>
+  <script type="text/javascript">
+    function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+  </script>
   <link rel="shortcut icon" href="Images/logo_transperent.ico">
   <title>IvyBros</title>
 </head>
@@ -52,13 +57,13 @@
       <div class="row">
         <div class='col-md-6'>
           <div class='thumbnail'>
-            <a href='https://loancalculator.000webhostapp.com'><img src="Loan_calculator.png" class="img-thumbnail" alt="Cinque Terre"></a>
+            <a href='https://loancalculator.000webhostapp.com'><img src="Loan_calculator.png" class="img-thumbnail" alt="Cinque Terre" style="min-height: 300px "></a>
             <div class='caption'>This is a loan calculator that we had assign to us during the HSCC competition</div>
           </div>
         </div>
         <div class='col-md-6'>
           <div class='thumbnail'>
-          <a href='Projects/rcolor.html'><img src="Images/rcolor.png" class="img-thumbnail" alt="Random Color Generator"></a>
+          <a href='Projects/rcolor.html'><iframe style='min-height: 300px; overflow: hidden;' scrolling="no" src="Projects/rcolor.html" frameborder="0" width="100%" height=""></iframe></a>
             <div class='caption'>A random color generator made using javascript and jQuery</div>
           </div>
         </div>
