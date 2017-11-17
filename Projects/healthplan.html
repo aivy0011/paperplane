@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta name="author" content="Allen Ivy">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <script src="../Javascript/jquery-2.1.1.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="../bootstrap-3.2.0-dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../bootstrap-3.2.0-dist/css/bootstrap-theme.css">
+  <link rel="stylesheet" type="text/css" href="../CSS/sitemain.css">
+  <script type="text/javascript" src="../bootstrap-3.2.0-dist/js/bootstrap.js"></script>
+  <script src="../Javascript/jcanvas.min.js"></script>
+  <script type="text/javascript" src="../Javascript/hp.js"></script>
+  <script type="text/javascript" src="../Javascript/contact.js"></script>
+  <link rel="shortcut icon" href="../Images/logo_transperent.ico">
+  <title>Health Plan</title>
+  <style>
+    html, body, #content {
+      max-width:  100%;
+      max-height: 100%;
+      margin: 0px;
+    }
+    .btn {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fullwidth" style="text-align: center;">
+
+
+    <!-- Code for the navigation menu at thw top of the page -->
+    <nav class="navbar navbar-custom navbar-static-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html"><img style="max-width:100px; margin-top: -16px;"src="../Images/logo_transperent.png" alt="IvyBro's"></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="https://drive.google.com/file/d/0ByCONsnbCBjKa3pXOUFBU0FaQTA/view?usp=sharing">About Me</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="projectsCSC116.html">Projects from CSC116</a></li>
+                <li><a href="projects.html">Other Projects</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+
+    <!-- Button trigger modal -->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="Title"></h4>
+          </div>
+          <div class="modal-body" id="modal_body">
+            <label>Do you smoke?</label><input type='text'><br>
+            <label>Weight (lb)</label><input type='number'><br>
+            <label>Height (in)</label><input type='number'><br>
+            <div id="spouse">
+              <label>Does your spouse smoke?</label><input type='text'><br>
+              <label>Spouse Weight (lb)</label><input type='number'><br>
+              <label>Spouse Height (in)</label><input type='number'><br>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn" id="Calc" style="background-color: #3498db; color: white;">Calculate</button>
+            <button type="button" class="btn" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="panel panel-default">
+      <div class="panel-heading">Health Plan</div>
+      <div class="panel-body">
+        <p>Medical costs and health insurance premiums continue to increase. In an effort to encourage individuals to embrace healthier lifestyles, the Wolfpack Health Plan is offering discounts to members who do not smoke and/or are not overweight. Health plan members who are obese must pay a surcharge.</p>
+      </div>
+    </div>
+    <div id="content">
+      <button class="btn" id="start" style="background-color: #2ecc71; color: #ecf0f1">Calculate Health Premium</button>
+      <div class="row" id='plans' style="display: none;">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 "><button value="e" class="btn btn-block" style="background-color: #16a085; color: white;">Employee</button></div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 "><button value="c" class="btn btn-block" style="background-color: #2980b9; color: white;">Employee and Children</button></div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 "><button value="f" class="btn btn-block" style="background-color: #34495e; color: white;">Employee and Family</button></div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 "><button value="s" class="btn btn-block" style="background-color: #9b59b6; color: white;">Employee and Spouse</button></div>
+      </div>
+      <h1 id="Premium"></h1>
+    </div>
+  </div>
+
+</body>
+</html>
